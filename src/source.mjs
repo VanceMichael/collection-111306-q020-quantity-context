@@ -7,7 +7,7 @@ const configuration = JSON.parse(await readFile(new URL('../fixtures/source.json
 const controls = JSON.parse(await readFile(new URL('../fixtures/controls.json', import.meta.url)));
 const kind = configuration.kind;
 
-export async function startSource() {
+export async function startSource({ port = 0 } = {}) {
   let state = structuredClone(configuration.data);
   const requests = [];
   const timers = new Set();
@@ -70,7 +70,7 @@ export async function startSource() {
     if (kind === 'query-body' && state.mode === 'reject') { response.writeHead(417); response.end(); return; }
     response.writeContinue(); void serve(request, response);
   });
-  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+  await new Promise(resolve => server.listen(port, '127.0.0.1', resolve));
   return {
     url: `http://127.0.0.1:${server.address().port}`,
     close: async () => { for (const timer of timers) clearTimeout(timer); server.closeAllConnections(); await new Promise(resolve => server.close(resolve)); }

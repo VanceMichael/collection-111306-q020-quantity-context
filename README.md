@@ -25,7 +25,7 @@ docker run --rm --network none --ipc=host plant-quantity-context npm test
 docker run --rm --network none --ipc=host plant-quantity-context npm run demo
 ```
 
-开发时 `npm start` 打印本地源地址，浏览器页面或 HTTP 接口可直接查看。`CAPTURE_PATH` 可改变接收文件路径。重复运行预览追加记录；删除 `var` 可从空接收状态开始。
+开发时 `npm start` 打印本地源地址；设置 `PORT` 可指定监听端口，未设置时自动分配回环端口。浏览器页面或 HTTP 接口可直接查看。`CAPTURE_PATH` 可改变接收文件路径。重复运行预览追加记录；删除 `var` 可从空接收状态开始。
 
 ## 模块
 
