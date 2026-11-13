@@ -1,0 +1,16 @@
+{
+  "name": "plant-quantity-context",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.20.0"
+  },
+  "scripts": {
+    "test": "node --test --test-concurrency=1 test/*.test.mjs",
+    "build": "node scripts/check.mjs",
+    "demo": "node src/preview.mjs",
+    "start": "node src/serve.mjs"
+  },
+  "dependencies": {}
+}

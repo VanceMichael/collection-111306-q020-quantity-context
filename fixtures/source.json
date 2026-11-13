@@ -1,0 +1,12 @@
+{
+  "kind": "quantity-context",
+  "data": {
+    "version": "v1",
+    "pages": [
+      {
+        "id": "capacity",
+        "html": "<article><h1>新增产能</h1><p>单位：万吨/年</p><section id=\"line-a\"><h2>一号线</h2><p>设计产能1.2～1.5，实际不少于三百万千克/年。</p><p>投资约1.2亿元；设备型号A1200，投产日2026-11-13。</p></section><section id=\"line-b\"><h2>二号线</h2><p>单位：千吨/年</p><table><tr><th>项目</th><th>产能</th></tr><tr><td>主产品</td><td>20<sup><a href=\"#note-a\">a</a></sup></td></tr></table><p id=\"note-a\">a：含副产品，统计期未说明。</p><p>备用线产能待定。</p></section></article>"
+      }
+    ]
+  }
+}
