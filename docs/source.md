@@ -1,6 +1,6 @@
 # 本地资料源约定
 
-GET /api/document/:id 返回公告 HTML。fixtures/source.json 含章节单位、局部单位覆盖、跨表脚注、中文数量、范围、约数及非数量编号。原始预览只剥标签，不声称已识别数量。规则版本属于后续采集功能；源端 version 仅标识文稿。
+GET /api/document/:id 返回公告 HTML。fixtures/source.json 含章节单位、局部单位覆盖、跨表脚注、中文数量、范围、约数及非数量编号。原始预览只剥标签，不声称已识别数量。接收器已在 quantity-extraction 记录中携带 ruleVersion（见 src/quantity/rules.mjs）；源端 version 仅标识文稿。
 
 ## 通用控制
 
